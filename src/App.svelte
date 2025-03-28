@@ -4,7 +4,7 @@
 
   import { Collection } from '@signaldb/core'
   import createLocalStorageAdapter from '@signaldb/localstorage'
-
+  import svelteReactivityAdapter from '@signaldb/svelte'
   import { Button, Checkbox } from "bits-ui";
 
   interface Todo {
@@ -14,22 +14,11 @@
   }
   type FilterType = "all" | "active" | "done"
 
+  let dep = $state(0);
+
   const Todos = new Collection<Todo>({
     persistence: createLocalStorageAdapter('todos'),
-    reactivity: {
-      create() {
-        let dep = $state(0);
-        return {
-          depend() {
-            dep;
-          },
-          notify() {
-            dep += 1;
-          },
-        };
-      },
-      isInScope: () => !!$effect.tracking(),
-    },
+    reactivity: svelteReactivityAdapter,
   })
 
   const filterMap: Record<FilterType, any> = {
@@ -54,6 +43,8 @@
       cursor.cleanup()
     };
   });
+
+  $inspect(items)
 
   async function trans(operation: () => any) {
     duration = 300
