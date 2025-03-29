@@ -1,25 +1,11 @@
 <script lang="ts">
+  import type { Todo } from "./types";
+
   import { tick } from "svelte";
   import { slide } from "svelte/transition";
-
-  import { Collection } from '@signaldb/core'
-  import createLocalStorageAdapter from '@signaldb/localstorage'
-  import svelteReactivityAdapter from '@signaldb/svelte'
   import { Button, Checkbox } from "bits-ui";
 
-  interface Todo {
-    id: string
-    text: string
-    done: boolean
-  }
-  type FilterType = "all" | "active" | "done"
-
-  let dep = $state(0);
-
-  const Todos = new Collection<Todo>({
-    persistence: createLocalStorageAdapter('todos'),
-    reactivity: svelteReactivityAdapter,
-  })
+  import Todos from "$lib/Todos.svelte.ts"
 
   const filterMap: Record<FilterType, any> = {
     all: {},
