@@ -23,12 +23,12 @@ const syncManager = new SyncManager<Record<string, any>, { id: string }>({
       console.log("sse connected");
     }
     eventSource.addEventListener("connected", onConnect);
-    eventSource.addEventListener("changed", handleChange);
+    eventSource.addEventListener("change", handleChange);
 
     return () => {
       console.log("clean");
       eventSource.removeEventListener("connected", onConnect);
-      eventSource.removeEventListener("create", handleChange)
+      eventSource.removeEventListener("change", handleChange)
     }
   },
   async pull({ name }) {
