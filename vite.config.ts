@@ -5,9 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/svelte-todo-signaldb/",
   build: {
-    outDir: "dist/svelte-todo-signaldb",
+    outDir: "backend/dist",
   },
   resolve: {
     alias: [
