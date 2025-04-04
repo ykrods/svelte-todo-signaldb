@@ -13,6 +13,7 @@
     "@signaldb/core": "1.5.1",
     "@signaldb/localstorage": "1.0.0",
     "@signaldb/svelte": "1.0.0",
+    "@signaldb/sync": "1.2.2",
     "@sveltejs/vite-plugin-svelte": "5.0.3",
     "@tailwindcss/vite": "4.1.2",
     "@tsconfig/svelte": "^5.0.4",
