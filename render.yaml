@@ -1,0 +1,9 @@
+services:
+  - name: svelte-todo-signaldb
+    type: web
+    runtime: node
+    plan: free
+    numInstances: 1
+    region: singapore
+    buildCommand: npm install && npm run build
+    startCommand: npm start
