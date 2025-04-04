@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   build: {
+    sourcemap: true,
     outDir: "backend/dist",
   },
   resolve: {
