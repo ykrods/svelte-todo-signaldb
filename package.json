@@ -10,19 +10,19 @@
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
   },
   "devDependencies": {
-    "@signaldb/core": "1.5.0",
+    "@signaldb/core": "1.5.1",
     "@signaldb/localstorage": "1.0.0",
     "@signaldb/svelte": "1.0.0",
     "@sveltejs/vite-plugin-svelte": "5.0.3",
-    "@tailwindcss/vite": "4.0.17",
+    "@tailwindcss/vite": "4.1.2",
     "@tsconfig/svelte": "^5.0.4",
-    "bits-ui": "1.3.14",
-    "daisyui": "5.0.9",
-    "svelte": "5.25.3",
+    "bits-ui": "1.3.16",
+    "daisyui": "5.0.12",
+    "svelte": "5.25.6",
     "svelte-check": "4.1.5",
-    "tailwindcss": "4.0.17",
+    "tailwindcss": "4.1.2",
     "tailwindcss-animate": "1.0.7",
     "typescript": "5.8.2",
-    "vite": "6.2.3"
+    "vite": "6.2.5"
   }
 }
