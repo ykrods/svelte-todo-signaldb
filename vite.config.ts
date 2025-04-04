@@ -2,6 +2,7 @@ import path from "node:path";
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import tailwindcss from '@tailwindcss/vite'
+import { spawn } from "./vite-plugin-spawn.ts"
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -17,5 +18,6 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     svelte(),
+    spawn("npm", "run", "dev", "-w", "backend", "--", "--clear-screen=false"),
   ],
 })
