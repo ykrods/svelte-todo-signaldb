@@ -30,8 +30,6 @@
     };
   });
 
-  $inspect(items)
-
   async function trans(operation: () => any) {
     duration = 300
     await operation()
