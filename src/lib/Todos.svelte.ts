@@ -6,23 +6,7 @@ import { createSubscriber } from "svelte/reactivity";
 
 const Todos = new Collection<Todo>({
   persistence: createLocalStorageAdapter('todos-svelte'),
-  reactivity: {
-    create() {
-      let _update;
-      const subscribe = createSubscriber((update) => {
-        _update = update;
-      });
-      return {
-        depend() {
-          subscribe()
-        },
-        notify() {
-          _update?.();
-        },
-      };
-    },
-    isInScope: () => !!$effect.tracking(),
-  }
+  reactivity: svelteReactivityAdapter
 })
 
 syncManager.addCollection(Todos, {
