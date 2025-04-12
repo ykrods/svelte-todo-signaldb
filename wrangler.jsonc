@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "svelte-todo-signaldb",
+  "compatibility_date": "2025-04-03",
+  "main": "./src/api/index.ts",
+  "assets": {
+    "not_found_handling": "single-page-application"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "SSE_HUB", "class_name": "SSEHub" }
+    ]
+  }
+}

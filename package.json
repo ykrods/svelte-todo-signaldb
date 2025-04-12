@@ -4,30 +4,34 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npm run start -w backend",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "deploy": "vite build && wrangler deploy"
   },
   "devDependencies": {
-    "@signaldb/core": "1.5.1",
+    "@cloudflare/vite-plugin": "1.0.8",
+    "@signaldb/core": "1.5.2",
     "@signaldb/localstorage": "1.0.0",
-    "@signaldb/svelte": "1.0.0",
+    "@signaldb/svelte": "1.1.1",
     "@signaldb/sync": "1.2.2",
     "@sveltejs/vite-plugin-svelte": "5.0.3",
-    "@tailwindcss/vite": "4.1.2",
-    "@tsconfig/svelte": "^5.0.4",
-    "bits-ui": "1.3.16",
-    "daisyui": "5.0.12",
-    "svelte": "5.25.6",
-    "svelte-check": "4.1.5",
-    "tailwindcss": "4.1.2",
-    "tailwindcss-animate": "1.0.7",
-    "typescript": "5.8.2",
-    "vite": "6.2.5"
+    "@tailwindcss/vite": "4.1.4",
+    "@tsconfig/svelte": "5.0.4",
+    "@types/node": "22.14.1",
+    "bits-ui": "1.3.19",
+    "daisyui": "5.0.27",
+    "svelte": "5.28.1",
+    "svelte-check": "4.1.6",
+    "tailwindcss": "4.1.4",
+    "typescript": "5.8.3",
+    "vite": "6.3.2",
+    "wrangler": "4.12.0"
   },
-  "workspaces": [
-    "backend"
-  ]
+  "dependencies": {
+    "@hono/zod-validator": "0.4.3",
+    "hono": "4.7.7",
+    "zod": "3.24.3"
+  }
 }
