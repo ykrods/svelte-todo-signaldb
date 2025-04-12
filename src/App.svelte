@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { Todo } from "./types";
+  import type { Todo, FilterType } from "./types";
 
   import { tick } from "svelte";
   import { slide } from "svelte/transition";
   import { Button, Checkbox } from "bits-ui";
 
-  import Todos from "$lib/Todos.svelte.ts"
+  import Todos from "./lib/Todos.svelte"
 
   const filterMap: Record<FilterType, any> = {
     all: {},

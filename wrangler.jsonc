@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "svelte-todo-signaldb",
+  "compatibility_date": "2025-04-03",
+  "main": "./src/api/index.ts",
+  "assets": {
+    "not_found_handling": "single-page-application"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "TODO_STORE", "class_name": "TodoStore" }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "TodoStore"
+      ]
+    }
+  ]
+}

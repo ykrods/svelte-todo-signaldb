@@ -1,5 +1,6 @@
-import path from "node:path";
+import path from "node:path"
 import { defineConfig } from 'vite'
+import { cloudflare } from '@cloudflare/vite-plugin'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import tailwindcss from '@tailwindcss/vite'
 
@@ -8,7 +9,6 @@ export default defineConfig({
   build: {
     minify: false,
     sourcemap: true,
-    outDir: "backend/dist",
   },
   resolve: {
     alias: [
@@ -18,5 +18,6 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     svelte(),
+    cloudflare(),
   ],
 })

@@ -2,7 +2,7 @@ import { SyncManager } from "@signaldb/sync"
 import createLocalStorageAdapter from '@signaldb/localstorage'
 
 
-const apiBaseUrl = import.meta.env.VITE_SYNC_BASE_URL;
+const apiBaseUrl = '/api'
 
 const syncManager = new SyncManager<Record<string, any>, { id: string }>({
   id: "self-managed-sync-manager",
