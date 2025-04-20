@@ -15,20 +15,12 @@
 
   let newItemText: string = $state("")
 
-  let items: Todo[] = $state.raw([])
   let filterType: FilterType = $state("all")
   let filter = $derived(filterMap[filterType])
   // for transition
   let duration = $state(0)
 
-  $effect(() => {
-    const cursor = Todos.find(filter)
-    items = cursor.fetch()
-
-    return () => {
-      cursor.cleanup()
-    };
-  });
+  let items = $derived(Todos.find(filter).fetch())
 
   async function trans(operation: () => any) {
     duration = 300
