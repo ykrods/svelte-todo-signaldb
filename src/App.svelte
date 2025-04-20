@@ -52,7 +52,7 @@
     })
   }
 </script>
-<main class="max-w-xl mx-auto flex flex-col h-screen">
+<main class="mx-3 max-w-xl mx-auto flex flex-col min-h-svh">
   <h1 class="m-5 text-3xl font-bold text-center">Todo</h1>
   <div class="flex gap-3 m-3">
     <label class="input flex-1">
@@ -73,7 +73,7 @@
 
   <ul class="flex-1 overflow-y-auto">
     {#each items as todo (todo.id)}
-      <li class="flex gap-3 m-1" transition:slide={{ duration }}>
+      <li class="flex gap-3 mx-3 my-1" transition:slide={{ duration }}>
         <label class="fieldset-label flex-1">
           <Checkbox.Root
             class="checkbox"
@@ -96,7 +96,7 @@
     {/each}
   </ul>
 
-  <div class="flex justify-center m-3">
+  <div class="flex justify-center my-3">
     <div class="join">
       {#each ["all", "active", "done"] as value}
         <input
