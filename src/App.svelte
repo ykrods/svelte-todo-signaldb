@@ -1,4 +1,5 @@
 <script lang="ts">
+  import githubLogo from "./assets/github-mark.svg"
   import type { Todo, FilterType } from "./types";
 
   import { tick } from "svelte";
@@ -53,6 +54,11 @@
   }
 </script>
 <main class="mx-3 max-w-xl mx-auto flex flex-col min-h-svh">
+  <div class="absolute top-5 right-3">
+    <a href="https://github.com/ykrods/svelte-todo-signaldb" target="_blank" rel="noreferrer">
+      <img src={githubLogo} class="size-8" alt="move to github repository" />
+    </a>
+  </div>
   <h1 class="m-5 text-3xl font-bold text-center">Todo</h1>
   <div class="flex gap-3 m-3">
     <label class="input flex-1">
