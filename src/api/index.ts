@@ -119,11 +119,11 @@ todos.put(
     const created = await getTodoStoreStub(c).put(todo);
     if (created) {
       c.status(201)
-      getTodoStoreStub(c).publishChange(todo)
+      await getTodoStoreStub(c).publishChange(todo)
       return c.json(todo)
     } else {
       c.status(200)
-      getTodoStoreStub(c).publishChange(todo)
+      await getTodoStoreStub(c).publishChange(todo)
       return c.json(todo)
     }
   },
@@ -135,7 +135,7 @@ todos.delete('/:id{[A-Za-z0-9]{1,32}}', async (c) => {
 
   if (deleted) {
     c.status(204)
-    getTodoStoreStub(c).publishChange({ id })
+    await getTodoStoreStub(c).publishChange({ id })
     return c.body(null)
   } else {
     c.status(404)
