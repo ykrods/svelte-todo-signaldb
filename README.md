@@ -1,8 +1,8 @@
+[DEMO](https://svelte-todo-signaldb.ykrods.workers.dev/)
+
 # Todo
 
 A todo apps using the following stacks
-
-https://ykrods.github.io/svelte-todo-signaldb/
 
 ## Stacks
 
@@ -12,6 +12,8 @@ https://ykrods.github.io/svelte-todo-signaldb/
 - [daisy UI](https://daisyui.com/)
 - [SignalDB](https://signaldb.js.org/)
 - [heroicons](https://heroicons.com/)
+- [Hono](https://hono.dev/)
+- [Cloudflare Workers](https://workers.cloudflare.com/)
 
 ## Reference
 
