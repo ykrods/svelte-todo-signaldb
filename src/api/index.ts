@@ -129,9 +129,9 @@ todos.put(
   },
 )
 
-todos.delete('/:id{[A-Za-z0-9]{1,32}}', (c) => {
+todos.delete('/:id{[A-Za-z0-9]{1,32}}', async (c) => {
   const { id } = c.req.param()
-  const deleted = getTodoStoreStub(c).delete(id)
+  const deleted = await getTodoStoreStub(c).delete(id)
 
   if (deleted) {
     c.status(204)
