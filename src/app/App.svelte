@@ -1,7 +1,6 @@
 <script lang="ts">
   import githubLogo from "./assets/github-mark.svg"
-  import { Trash } from "@steeze-ui/heroicons";
-  import { Icon } from '@steeze-ui/svelte-icon';
+  import trash from "./assets/heroicons/24/outline/trash.svg";
 
   import type { Todo } from "../types";
   import type { FilterType } from "./types";
@@ -97,7 +96,7 @@
           class="btn btn-outline btn-circle"
           onclick={() => removeTodo(todo)}
         >
-          <Icon src={Trash} theme="outline" size="60%"/>
+          <img src={trash} class="size-5" alt="trash" />
         </button>
       </li>
     {/each}
