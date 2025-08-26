@@ -1,0 +1,11 @@
+{
+  "include": ["src/api/**/*.ts"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2023"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["./worker-configuration.d.ts"]
+  }
+}

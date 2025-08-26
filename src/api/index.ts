@@ -1,3 +1,5 @@
+import type { Todo } from "../types"
+
 import { DurableObject } from "cloudflare:workers"
 
 import { Hono } from 'hono'

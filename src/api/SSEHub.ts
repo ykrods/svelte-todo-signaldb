@@ -1,4 +1,4 @@
-import type { Todo } from "../types"
+import type { SSESession, SSEMessage } from "./types"
 
 
 export class SSEHub {

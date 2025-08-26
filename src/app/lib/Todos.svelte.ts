@@ -1,4 +1,4 @@
-import type { Todo } from "../types"
+import type { Todo } from "../../types"
 import { Collection } from '@signaldb/core'
 import createLocalStorageAdapter from '@signaldb/localstorage'
 import svelteReactivityAdapter from '@signaldb/svelte'

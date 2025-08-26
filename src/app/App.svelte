@@ -1,6 +1,7 @@
 <script lang="ts">
   import githubLogo from "./assets/github-mark.svg"
-  import type { Todo, FilterType } from "./types";
+  import type { Todo } from "../types";
+  import type { FilterType } from "./types";
 
   import { tick } from "svelte";
   import { slide } from "svelte/transition";

@@ -12,7 +12,7 @@ export default defineConfig({
   },
   resolve: {
     alias: [
-      { find: "$lib/", replacement: path.join(__dirname, "src/lib/") },
+      { find: "$lib/", replacement: path.join(__dirname, "src/app/lib/") },
     ],
   },
   plugins: [
