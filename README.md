@@ -2,15 +2,14 @@
 
 # Todo
 
-A todo apps using the following stacks
-
-## Stacks
+A todo apps using the following stacks:
 
 - [Svelte (v5)](https://svelte.dev/)
 - [tailwindcss (v4)](https://tailwindcss.com/)
 - [Bits UI](https://bits-ui.com/)
 - [daisy UI](https://daisyui.com/)
 - [SignalDB](https://signaldb.js.org/)
+- [@steeze-ui/icons](https://github.com/steeze-ui/icons)
 - [heroicons](https://heroicons.com/)
 - [Hono](https://hono.dev/)
 - [Cloudflare Workers](https://workers.cloudflare.com/)
